@@ -67,6 +67,6 @@ def hard(text: str):
 
 
 if __name__ == '__main__':
-    text = read_file_to_array('day1.txt')
+    text = read_file_to_array('inputs/day1.txt')
     print(f'Easy: {easy(text)}')
     print(f'Hard: {hard(text)}')

@@ -92,7 +92,7 @@ def hard(games_dict: dict):
 
 
 if __name__ == '__main__':
-    text = read_file_to_array('day2.txt')
+    text = read_file_to_array('inputs/day2.txt')
     cleaned = clean_data(text)
-    print(easy(cleaned))
-    print(hard(cleaned))
+    print(f'Easy: {easy(cleaned)}')
+    print(f'Hard: {hard(cleaned)}')
