@@ -81,13 +81,10 @@ def calc(schematic: list):
 
                 break
 
-    asdf = {}
     for key, val in gears.items():
-        asdf[key] = val
         if len(val) == 2:
             total_hard += (int(val[0]) * int(val[1]))
 
-    print(asdf)
     return total, total_hard
 
 
