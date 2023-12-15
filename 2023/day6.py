@@ -1,5 +1,3 @@
-from functools import reduce
-from operator import mul
 from utils import read_file_to_array
 
 
