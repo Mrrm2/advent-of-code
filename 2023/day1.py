@@ -33,7 +33,7 @@
 from utils import read_file_to_array
 
 
-def easy(text: str):
+def easy(text: list):
     total = 0
     for line in text:
         l, r = 0, len(line) - 1
@@ -49,7 +49,7 @@ def easy(text: str):
     return total
 
 
-def hard(text: str):
+def hard(text: list):
     total = 0
     for line in text:
         line_numbers = []
@@ -57,7 +57,8 @@ def hard(text: str):
             if line[i].isnumeric():
                 line_numbers.append((line[i]))
 
-            for val, num in enumerate(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'], start=1):
+            for val, num in enumerate(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
+                                      start=1):
                 if line[i:].startswith(num):
                     line_numbers.append(str(val))
 
@@ -67,6 +68,6 @@ def hard(text: str):
 
 
 if __name__ == '__main__':
-    text = read_file_to_array('inputs/day1.txt')
-    print(f'Easy: {easy(text)}')
-    print(f'Hard: {hard(text)}')
+    file = read_file_to_array('inputs/day1.txt')
+    print(f'Easy: {easy(file)}')
+    print(f'Hard: {hard(file)}')
